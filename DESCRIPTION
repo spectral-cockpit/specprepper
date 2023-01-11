@@ -1,0 +1,20 @@
+Package: specprepper
+Title: Plan and Apply Combinations of Preprocessing Operations on Spectra
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Philipp",
+           family = "Baumann",
+           role = c("aut", "cre"),
+           email = "baumann-philipp@protonmail.com",
+           comment = c(ORCID = "0000-0002-3194-8975"))
+Description: Parametrize common spectroscopic signal processing (preprocessing)
+  methods using a recipe-style syntax. Chain operations in sequence.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports: 
+    prospectr,
+    future.apply,
+    data.table
