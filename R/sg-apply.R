@@ -90,7 +90,7 @@ sg_apply <- function(X,
   }
 
   # Copy to avoid modifying the input data.table in place; low-memory object
-  dt_sg_plan <- copy(dt_sg_plan)
+  dt_sg_plan <- copy(dt_sg_plan) # use explicit copy
 
   if (is.null(dt_prep_sets)) {
 
