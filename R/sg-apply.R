@@ -138,7 +138,7 @@ sg_apply <- function(X,
   if (is.null(dt_prep_sets)) {
 
     # Prepare output
-    dt_out <- dt_sg_plan
+    dt_out <- copy(dt_sg_plan)
 
     if (isTRUE(nest_params)) {
       # wrap parameter columns of plan into list
