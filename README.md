@@ -5,4 +5,4 @@ This package is born from the idea that preprocessing methods in spectroscopy mo
 
 This is a very early, unstable version of the package. The goal is to wrap different signal processing methods and to chain them in sequence. For in memory structures, we rely on matrix class with attributes, where on disk side we use the zarr data structure for persistence and speed.
 
-To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used.
+To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name.
