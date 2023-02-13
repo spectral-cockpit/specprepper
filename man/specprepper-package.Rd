@@ -4,7 +4,7 @@
 \name{specprepper-package}
 \alias{specprepper}
 \alias{specprepper-package}
-\title{specprepper: Plan and Apply Combinations of Preprocessing Operations on Spectra}
+\title{specprepper: Plan and Apply Chained Preprocessing Operations on Spectra}
 \description{
 Parametrize common spectroscopic signal processing (preprocessing) methods using a recipe-style syntax. Chain operations in sequence.
 }
