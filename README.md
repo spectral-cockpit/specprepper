@@ -30,7 +30,7 @@ spec <- spec_dt$.predictor_values[[1]]
 
 ## Parameterize Savitzky-Golay filters
 
-We convert a custom list and expand it to a preprocessing plan.
+We create a custom list and expand it to a preprocessing plan.
 
 ```r
 make_sg_param_list <- function(sg_windows = c(5L, 9L, 13L, 15L, 17L, 19L, 21L,
