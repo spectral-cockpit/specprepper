@@ -60,7 +60,11 @@ make_preproc_plan <- function() {
 }
 
 preproc_plan <- make_preproc_plan()
+```
 
+We now inspect the plan.
+
+```r
 r$> preproc_plan
     prep_set   prep_label m p  w
  1:     sg_1  sg_m1_p2_w5 1 2  5
