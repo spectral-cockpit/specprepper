@@ -20,7 +20,7 @@ plus {future.apply} map-reduce API provide memory-efficient mappings.
 - Binning/bucketing
 - Standard Normal Variate
 - Bruker Inc custom vector normalization
-- 1-D Gaussian pyramid (armadillo binding)
+- 1-D Gaussian pyramid (armadillo binding) aka weighted moving average filter
 
 # Getting started
 
