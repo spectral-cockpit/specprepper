@@ -42,6 +42,10 @@ Savitzky-Golay smoothers with a single function application.}
 
 \item{append_rows}{tbd}
 }
+\value{
+\subsection{data.table with the following (list)columns:by}{
+}
+}
 \description{
 Apply Savitzky-Golay filtering at variable combinations of
 parameter sets for set(s) of spectra.
