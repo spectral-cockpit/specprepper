@@ -16,3 +16,11 @@ provides memory-efficient mappings.
 if (!requireNamespace("remotes") install.packages("remotes"))
 remotes::install_github("spectral-cockpit/specprepper")
 ```
+
+```r
+library("data.table")
+spec_dt <- qs::qread(file = file.path("inst", "extdata", "spec_dt"))
+(spec <- spec_dt$.predictor_values[[1]])
+
+library("specprepper")
+```
