@@ -10,6 +10,17 @@ To schedule propreprocessing operations, simple tooling using S3 descriptive dat
 The algorithmic side is provided by excellent {prospectr}, and {data.table} 
 plus {future.apply} map-reduce API provide memory-efficient mappings.
 
+## Currently supported methods
+
+- Savitzky-Golay smoothing
+
+## Planned methods
+
+- Different wavelet transforms
+- Binning/bucketing
+- Standard Normal Variate
+- Bruker Inc custom vector normalization
+
 # Getting started
 
 ## Installation
