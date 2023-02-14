@@ -10,6 +10,10 @@ To schedule propreprocessing operations, simple tooling using S3 descriptive dat
 The algorithmic side is provided by excellent {prospectr}, and {data.table} 
 plus {future.apply} map-reduce API provide memory-efficient mappings.
 
+{specprepper} works with sticky attributes pinged via {sticky}. This means
+that processing function respect all preexisting attributes and do not strip
+them in the returned output.
+
 ## Currently supported methods
 
 - Savitzky-Golay smoothing
