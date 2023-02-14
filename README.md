@@ -37,4 +37,52 @@ make_preproc_plan <- function() {
 }
 
 preproc_plan <- make_preproc_plan()
+
+r$> preproc_plan
+    prep_set   prep_label m p  w
+ 1:     sg_1  sg_m1_p2_w5 1 2  5
+ 2:     sg_1  sg_m1_p2_w9 1 2  9
+ 3:     sg_1 sg_m1_p2_w13 1 2 13
+ 4:     sg_1 sg_m1_p2_w15 1 2 15
+ 5:     sg_1 sg_m1_p2_w17 1 2 17
+ 6:     sg_1 sg_m1_p2_w19 1 2 19
+ 7:     sg_1 sg_m1_p2_w21 1 2 21
+ 8:     sg_1 sg_m1_p2_w23 1 2 23
+ 9:     sg_1 sg_m1_p2_w25 1 2 25
+10:     sg_1 sg_m1_p2_w27 1 2 27
+11:     sg_1 sg_m1_p2_w35 1 2 35
+12:     sg_1  sg_m1_p3_w5 1 3  5
+13:     sg_1  sg_m1_p3_w9 1 3  9
+14:     sg_1 sg_m1_p3_w13 1 3 13
+15:     sg_1 sg_m1_p3_w15 1 3 15
+16:     sg_1 sg_m1_p3_w17 1 3 17
+17:     sg_1 sg_m1_p3_w19 1 3 19
+18:     sg_1 sg_m1_p3_w21 1 3 21
+19:     sg_1 sg_m1_p3_w23 1 3 23
+20:     sg_1 sg_m1_p3_w25 1 3 25
+21:     sg_1 sg_m1_p3_w27 1 3 27
+22:     sg_1 sg_m1_p3_w35 1 3 35
+23:     sg_2  sg_m2_p3_w5 2 3  5
+24:     sg_2  sg_m2_p3_w9 2 3  9
+25:     sg_2 sg_m2_p3_w13 2 3 13
+26:     sg_2 sg_m2_p3_w15 2 3 15
+27:     sg_2 sg_m2_p3_w17 2 3 17
+28:     sg_2 sg_m2_p3_w19 2 3 19
+29:     sg_2 sg_m2_p3_w21 2 3 21
+30:     sg_2 sg_m2_p3_w23 2 3 23
+31:     sg_2 sg_m2_p3_w25 2 3 25
+32:     sg_2 sg_m2_p3_w27 2 3 27
+33:     sg_2 sg_m2_p3_w35 2 3 35
+34:     sg_2  sg_m2_p4_w5 2 4  5
+35:     sg_2  sg_m2_p4_w9 2 4  9
+36:     sg_2 sg_m2_p4_w13 2 4 13
+37:     sg_2 sg_m2_p4_w15 2 4 15
+38:     sg_2 sg_m2_p4_w17 2 4 17
+39:     sg_2 sg_m2_p4_w19 2 4 19
+40:     sg_2 sg_m2_p4_w21 2 4 21
+41:     sg_2 sg_m2_p4_w23 2 4 23
+42:     sg_2 sg_m2_p4_w25 2 4 25
+43:     sg_2 sg_m2_p4_w27 2 4 27
+44:     sg_2 sg_m2_p4_w35 2 4 35
+    prep_set   prep_label m p  w
 ```
