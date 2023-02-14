@@ -15,13 +15,18 @@ provides memory-efficient mappings.
 ```r
 if (!requireNamespace("remotes") install.packages("remotes"))
 remotes::install_github("spectral-cockpit/specprepper")
+
+library("data.table")
+# load example data
+spec_dt <- qs::qread(file = file.path("inst", "extdata", "spec_dt"))
+spec <- spec_dt$.predictor_values[[1]]
 ```
 
-```r
-library("data.table")
-spec_dt <- qs::qread(file = file.path("inst", "extdata", "spec_dt"))
-(spec <- spec_dt$.predictor_values[[1]])
+## Parameterize Savitzky-Golay filters
 
+We convert a custom list and expand it to a preprocessing plan.
+
+```r
 make_sg_param_list <- function(sg_windows = c(5L, 9L, 13L, 15L, 17L, 19L, 21L,
                                               23L, 25L, 27L, 35L)) {
   param_list <- list(
