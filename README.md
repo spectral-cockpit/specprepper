@@ -1,9 +1,15 @@
 
 # Overview
 
+## Preamble
+
 This package is born from the idea that preprocessing methods in spectroscopy modeling are rather empirical in nature.
 
 This is a very early, unstable version of the package. The goal is to wrap different signal processing methods and to chain them in sequence. For in memory structures, we rely on matrix class with attributes, where on disk side we use the zarr data structure for persistence and speed.
+
+Please first project the memory availability on your system when using in-memory features.
+
+## Goals
 
 To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name. Because of the cloud-native nature of zarr, certainly once can use S3-like storages as MINIO.
 
@@ -42,6 +48,13 @@ library("data.table")
 # load example data
 spec_dt <- qs::qread(file = file.path("inst", "extdata", "spec_dt"))
 spec <- spec_dt$.predictor_values[[1]]
+# x-values as wavenumbers
+```
+## Glue sticky attributes
+
+```r
+library("sticky")
+sticky(spec)
 ```
 
 Inspect the data quickly.
