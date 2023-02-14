@@ -8,7 +8,7 @@ This is a very early, unstable version of the package. The goal is to wrap diffe
 To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name. Because of the cloud-native nature of zarr, certainly once can use S3-like storages as MINIO.
 
 The algorithmic side is provided by excellent {prospectr}, and {data.table} 
-provides memory-efficient mappings.
+plus {future.apply} map-reduce API provide memory-efficient mappings.
 
 # Getting started
 
