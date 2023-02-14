@@ -26,6 +26,9 @@ library("data.table")
 # load example data
 spec_dt <- qs::qread(file = file.path("inst", "extdata", "spec_dt"))
 spec <- spec_dt$.predictor_values[[1]]
+r$> spec_dt
+         .dims        .idx_row        .predictor_values                                         .predictor_labels
+1: 10874, 3578 1,2,3,4,5,6,... <data.table[10874x3578]> 7497.969,7496.041,7494.112,7492.184,7490.255,7488.327,...
 ```
 
 ## Parameterize Savitzky-Golay filters
