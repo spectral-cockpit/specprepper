@@ -125,3 +125,75 @@ r$> preproc_plan
 44:     sg_2 sg_m2_p4_w35 2 4 35
     prep_set   prep_label m p  w
 ```
+
+## Prepare futures
+
+```r
+library("future")
+plan(multisession)
+```
+
+## Launch the preprocessing prepper
+
+```r
+spec_proc <- sg_apply(
+  X = spec,
+  dt_sg_plan = preproc_plan
+)
+
+```
+
+## Inspect the results
+
+```r
+r$> spec_proc
+    prep_set   prep_label       prep_params                 spc_prep
+ 1:     sg_1  sg_m1_p2_w5 <data.table[1x3]> <data.table[10874x3574]>
+ 2:     sg_1  sg_m1_p2_w9 <data.table[1x3]> <data.table[10874x3570]>
+ 3:     sg_1 sg_m1_p2_w13 <data.table[1x3]> <data.table[10874x3566]>
+ 4:     sg_1 sg_m1_p2_w15 <data.table[1x3]> <data.table[10874x3564]>
+ 5:     sg_1 sg_m1_p2_w17 <data.table[1x3]> <data.table[10874x3562]>
+ 6:     sg_1 sg_m1_p2_w19 <data.table[1x3]> <data.table[10874x3560]>
+ 7:     sg_1 sg_m1_p2_w21 <data.table[1x3]> <data.table[10874x3558]>
+ 8:     sg_1 sg_m1_p2_w23 <data.table[1x3]> <data.table[10874x3556]>
+ 9:     sg_1 sg_m1_p2_w25 <data.table[1x3]> <data.table[10874x3554]>
+10:     sg_1 sg_m1_p2_w27 <data.table[1x3]> <data.table[10874x3552]>
+11:     sg_1 sg_m1_p2_w35 <data.table[1x3]> <data.table[10874x3544]>
+12:     sg_1  sg_m1_p3_w5 <data.table[1x3]> <data.table[10874x3574]>
+13:     sg_1  sg_m1_p3_w9 <data.table[1x3]> <data.table[10874x3570]>
+14:     sg_1 sg_m1_p3_w13 <data.table[1x3]> <data.table[10874x3566]>
+15:     sg_1 sg_m1_p3_w15 <data.table[1x3]> <data.table[10874x3564]>
+16:     sg_1 sg_m1_p3_w17 <data.table[1x3]> <data.table[10874x3562]>
+17:     sg_1 sg_m1_p3_w19 <data.table[1x3]> <data.table[10874x3560]>
+18:     sg_1 sg_m1_p3_w21 <data.table[1x3]> <data.table[10874x3558]>
+19:     sg_1 sg_m1_p3_w23 <data.table[1x3]> <data.table[10874x3556]>
+20:     sg_1 sg_m1_p3_w25 <data.table[1x3]> <data.table[10874x3554]>
+21:     sg_1 sg_m1_p3_w27 <data.table[1x3]> <data.table[10874x3552]>
+22:     sg_1 sg_m1_p3_w35 <data.table[1x3]> <data.table[10874x3544]>
+23:     sg_2  sg_m2_p3_w5 <data.table[1x3]> <data.table[10874x3574]>
+24:     sg_2  sg_m2_p3_w9 <data.table[1x3]> <data.table[10874x3570]>
+25:     sg_2 sg_m2_p3_w13 <data.table[1x3]> <data.table[10874x3566]>
+26:     sg_2 sg_m2_p3_w15 <data.table[1x3]> <data.table[10874x3564]>
+27:     sg_2 sg_m2_p3_w17 <data.table[1x3]> <data.table[10874x3562]>
+28:     sg_2 sg_m2_p3_w19 <data.table[1x3]> <data.table[10874x3560]>
+29:     sg_2 sg_m2_p3_w21 <data.table[1x3]> <data.table[10874x3558]>
+30:     sg_2 sg_m2_p3_w23 <data.table[1x3]> <data.table[10874x3556]>
+31:     sg_2 sg_m2_p3_w25 <data.table[1x3]> <data.table[10874x3554]>
+32:     sg_2 sg_m2_p3_w27 <data.table[1x3]> <data.table[10874x3552]>
+33:     sg_2 sg_m2_p3_w35 <data.table[1x3]> <data.table[10874x3544]>
+34:     sg_2  sg_m2_p4_w5 <data.table[1x3]> <data.table[10874x3574]>
+35:     sg_2  sg_m2_p4_w9 <data.table[1x3]> <data.table[10874x3570]>
+36:     sg_2 sg_m2_p4_w13 <data.table[1x3]> <data.table[10874x3566]>
+37:     sg_2 sg_m2_p4_w15 <data.table[1x3]> <data.table[10874x3564]>
+38:     sg_2 sg_m2_p4_w17 <data.table[1x3]> <data.table[10874x3562]>
+39:     sg_2 sg_m2_p4_w19 <data.table[1x3]> <data.table[10874x3560]>
+40:     sg_2 sg_m2_p4_w21 <data.table[1x3]> <data.table[10874x3558]>
+41:     sg_2 sg_m2_p4_w23 <data.table[1x3]> <data.table[10874x3556]>
+42:     sg_2 sg_m2_p4_w25 <data.table[1x3]> <data.table[10874x3554]>
+43:     sg_2 sg_m2_p4_w27 <data.table[1x3]> <data.table[10874x3552]>
+44:     sg_2 sg_m2_p4_w35 <data.table[1x3]> <data.table[10874x3544]>
+    prep_set   prep_label       prep_params                 spc_prep
+
+r$> format(object.size(spec_proc), units = "GB")
+[1] "12.7 Gb"
+```
