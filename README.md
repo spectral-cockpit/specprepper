@@ -25,7 +25,7 @@ I am also looking into Julia modules for further extension. For wavelets,
 Wavelets.jl seems very promising.
 
 Despite all, modular packaging is key. As a matter of fact, future will show 
-how many things we can do in once module.
+how many things we can do in one module.
 
 ## Currently supported methods
 
