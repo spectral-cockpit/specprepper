@@ -27,7 +27,7 @@ Wavelets.jl seems very promising.
 Despite all, modular packaging is key. As a matter of fact, future will show 
 how many things we can do in one module.
 
-This R meta libray with fused python/julia/rust code is mainly intended 
+This R meta library with fused python/julia/rust code is mainly intended 
 for creating containerized environments for preprocessing.
 
 ## Currently supported methods
