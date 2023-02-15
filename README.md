@@ -9,6 +9,14 @@ This is a very early, unstable version of the package. The goal is to wrap diffe
 
 Please first check and estimate the memory availability on your system when using in-memory features.
 
+## Scope of application
+
+This is a meta package that aims to provide both data-dependent and data
+independent preprocessing method. The former implies that the processing of 
+test data depends on the training data. For example, multiplicative scatter 
+correction (MSC) needs special teatment in training, evaluation and prediction
+workflows. That has implications for overfitting and data independence.
+
 ## Goals
 
 To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name. Because of the cloud-native nature of zarr, certainly one can use S3-like storages as MINIO.
