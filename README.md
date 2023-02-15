@@ -225,3 +225,9 @@ r$> spec_proc
 r$> format(object.size(spec_proc), units = "GB")
 [1] "12.7 Gb"
 ```
+
+# Credits
+
+The main idea for this package came while working at the Swiss Competence
+Center for Soils (KOBO). I have as well used internally some early prototype
+of this package in my own research.
