@@ -20,7 +20,7 @@ plus {future.apply} map-reduce API provide memory-efficient mappings.
 that processing function respect all preexisting attributes and do not strip
 them in the returned output.
 
-The roadmap is subject to change because this package is still under subject 
+The roadmap is subject to change because this package is still maturing.
 of change. I am also looking into Julia modules for further extension.
 
 ## Currently supported methods
