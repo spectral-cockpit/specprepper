@@ -21,7 +21,8 @@ that processing function respect all preexisting attributes and do not strip
 them in the returned output.
 
 The roadmap is subject to change because this package is still maturing.
-I am also looking into Julia modules for further extension.
+I am also looking into Julia modules for further extension. For wavelets,
+Wavelets.jl seems very promising.
 
 ## Currently supported methods
 
