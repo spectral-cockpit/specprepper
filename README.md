@@ -35,6 +35,7 @@ Wavelets.jl seems very promising.
 - Standard Normal Variate
 - Bruker Inc custom vector normalization
 - 1-D Gaussian pyramid (armadillo binding) aka weighted moving average filter
+- Ordination methods
 
 # Getting started
 
