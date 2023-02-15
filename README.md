@@ -11,7 +11,7 @@ Please first check and estimate the memory availability on your system when usin
 
 ## Goals
 
-To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name. Because of the cloud-native nature of zarr, certainly once can use S3-like storages as MINIO.
+To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name. Because of the cloud-native nature of zarr, certainly one can use S3-like storages as MINIO.
 
 The algorithmic side is provided by excellent {prospectr}, and {data.table} 
 plus {future.apply} map-reduce API provide memory-efficient mappings.
