@@ -12,7 +12,7 @@ Please first check and estimate the memory availability on your system when usin
 ## Scope of application
 
 This is a meta package that aims to provide both data-dependent and data
-independent preprocessing method. The former implies that the processing of 
+independent preprocessing methods. The former implies that the processing of 
 test data depends on the training data. For example, multiplicative scatter 
 correction (MSC) needs special teatment in training, evaluation and prediction
 workflows. That has implications for overfitting and data independence.
