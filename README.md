@@ -3,11 +3,16 @@
 
 ## Preamble
 
-This package is born from the idea that preprocessing methods in spectroscopy modeling are rather empirical in nature.
+This package is born from the idea that preprocessing methods in spectroscopy 
+modeling are rather empirical in nature.
 
-This is a very early, unstable version of the package. The goal is to wrap different signal processing methods and to chain them in sequence. For in-memory structures, we rely on matrix class with attributes, where on disk side we use the zarr data structure for persistence and speed.
+This is a very early, unstable version of the package. The goal is to wrap
+different signal processing methods and to chain them in sequence. For in-memory
+structures, we rely on matrix class with attributes, where on disk side we use
+the zarr data structure for persistence and speed.
 
-Please first check and estimate the memory availability on your system when using in-memory features.
+Please first check and estimate the memory availability on your system when
+using in-memory features.
 
 ## Scope of application
 
@@ -20,14 +25,18 @@ can only be mediated to apply such steps within the resampling units.
 
 ## Goals
 
-To schedule propreprocessing operations, simple tooling using S3 descriptive data.tables are used. So to speak it provides a recipe-like interface to configure methods and parameters to be applied in future. Hence the promising name. Because of the cloud-native nature of zarr, certainly one can use S3-like storages as MINIO.
+To schedule propreprocessing operations, simple tooling using S3 descriptive 
+data.tables are used. So to speak it provides a recipe-like interface to 
+configure methods and parameters to be applied in future. Hence the promising
+name. Because of the cloud-native nature of zarr, certainly one can use S3-like
+storages as MINIO.
 
 The algorithmic side is provided by excellent {prospectr}, and {data.table} 
 plus {future.apply} map-reduce API provide memory-efficient mappings.
 
-{specprepper} works with sticky attributes that are pinned to matrix or data.tables via {sticky}. This means
-that processing function respect all preexisting attributes and do not strip
-them in the returned output.
+{specprepper} works with sticky attributes that are pinned to matrix or 
+data.tables via {sticky}. This means that processing function respect all
+preexisting attributes and do not strip them in the returned output.
 
 The roadmap is subject to change because this package is still maturing.
 I am also looking into Julia modules for further extension. For wavelets,
