@@ -25,7 +25,7 @@ can only be mediated to apply such steps within the resampling units.
 
 ## Goals
 
-To schedule propreprocessing operations, simple tooling using S3 descriptive 
+To schedule prepreprocessing operations, simple tooling using S3 descriptive 
 data.tables are used. So to speak it provides a recipe-like interface to 
 configure methods and parameters to be applied in future. Hence the promising
 name. Because of the cloud-native nature of zarr, certainly one can use S3-like
