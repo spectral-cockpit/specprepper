@@ -66,7 +66,7 @@ for creating containerized environments for preprocessing.
 ## Installation
 
 ```r
-if (!requireNamespace("remotes") install.packages("remotes"))
+if (!requireNamespace("remotes")) install.packages("remotes")
 remotes::install_github("spectral-cockpit/specprepper")
 ```
 
