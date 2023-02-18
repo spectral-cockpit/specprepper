@@ -1,8 +1,6 @@
 
 # Overview
 
-## Preamble
-
 This package is born from the idea that preprocessing methods in spectroscopy 
 modeling are rather empirical in nature.
 
