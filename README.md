@@ -9,9 +9,6 @@ different signal processing methods and to chain them in sequence. For in-memory
 structures, we rely on matrix class with attributes, where on disk side we use
 the zarr data structure for persistence and speed.
 
-Please first check and estimate the memory availability on your system when
-using in-memory features.
-
 ## Scope of application
 
 This is a meta package that aims to provide both data-dependent and data
