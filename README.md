@@ -1,22 +1,19 @@
 
 # Overview
 
-This package is born from the idea that preprocessing methods in spectroscopy 
-modeling are rather empirical in nature.
+Preprocessing methods in spectroscopy modeling are mostly empirical.
 
-This is a very early, unstable version of the package. The goal is to wrap
-different signal processing methods and to chain them in sequence. For in-memory
-structures, we rely on matrix class with attributes, where on disk side we use
-the zarr data structure for persistence and speed.
+The goal of specprepper is to wrap different signal processing methods. Then,
+they can be chained in sequence.
 
 ## Scope of application
 
-This is a meta package that aims to provide both data-dependent and data
-independent preprocessing methods. The former implies that the processing of 
-test data depends on the training data. For example, multiplicative scatter 
+This meta package provides both data-dependent and data independent 
+preprocessing methods. For example, multiplicative scatter 
 correction (MSC) needs special teatment in training, evaluation and prediction
-workflows. That has implications for overfitting and data independence, which
-can only be mediated to apply such steps within the resampling units.
+workflows. This is mainly because of overfitting and the need of data 
+independence to avoid such effects. To mediate overfitting, such methods require
+application to data in the resampling units.
 
 ## Goals
 
