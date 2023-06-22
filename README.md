@@ -19,28 +19,25 @@ application to data within the resampling units.
 
 ## Goals
 
-To schedule prepreprocessing operations, simple tooling using S3 descriptive 
-data.tables are used. So to speak it provides a recipe-like interface to 
-configure methods and parameters to be applied in future. Hence the promising
-name. Because of the cloud-native nature of zarr, certainly one can use S3-like
-storages as MINIO.
+To schedule prepreprocessing operations, we use simple and efficient data 
+structures. We make use of the "data.table" class to provide a recipe-like
+interface to configure methods and its parameters to be applied to data.
 
-The algorithmic side is provided by excellent {prospectr}, and {data.table} 
-plus {future.apply} map-reduce API provide memory-efficient mappings.
+Many base algorithms are provided by excellent {prospectr}. On top, we use 
+{data.table} plus the {future.apply} map-reduce API provide memory-efficient
+computations.
 
-{specprepper} works with sticky attributes that are pinned to matrix or 
+{specprepper} also with sticky attributes that are pinned to matrix or 
 data.tables via {sticky}. This means that processing function respect all
 preexisting attributes and do not strip them in the returned output.
 
-The roadmap is subject to change because this package is still maturing.
-I am also looking into Julia modules for further extension. For wavelets,
-Wavelets.jl seems very promising.
+The roadmap of this package might is subject to change, because it is still 
+maturing.
 
-Despite all, modular packaging is key. As a matter of fact, future will show 
-how many things we can do in one module.
 
-This R meta library with fused python/julia/rust code is mainly intended 
-for creating containerized environments for preprocessing.
+This R meta library that is also spiced up with python and rust modules in the
+back is mainly intended for creating containerized environments for
+preprocessing.
 
 ## Currently supported methods
 
