@@ -3,8 +3,8 @@
 
 Preprocessing methods in spectroscopy modeling are mostly empirical.
 
-The goal of specprepper is to wrap different signal processing methods. 
-It used a recipe-like interface and makes it also possible to chain different
+The goal of {specprepper} is to wrap different signal processing methods. 
+It features a recipe-like interface and makes it also possible to chain different
 methods in sequence.
 
 ## Scope of application
