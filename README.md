@@ -24,7 +24,7 @@ structures. We make use of the "data.table" class to provide a recipe-like
 interface to configure methods and its parameters to be applied to data.
 
 Many base algorithms are provided by excellent {prospectr}. On top, we use 
-{data.table} plus the {future.apply} map-reduce API provide memory-efficient
+{data.table} plus the {future.apply} map-reduce API to provide memory-efficient
 computations.
 
 {specprepper} also with sticky attributes that are pinned to matrix or 
