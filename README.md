@@ -15,7 +15,7 @@ preprocessing methods. For example, multiplicative scatter
 correction (MSC) needs special teatment in training, evaluation and prediction
 workflows. This is mainly because of overfitting and the need of data 
 independence to avoid such effects. To mediate overfitting, such methods require
-application to data in the resampling units.
+application to data within the resampling units.
 
 ## Goals
 
