@@ -9,7 +9,7 @@
 #' * `prep_set` (character)
 #' * `prep_label` (character)
 #' * `m` (integer): order of the derivative; `m = 0` signifies no derivative
-#' * `p` (integer):
+#' * `p` (integer): polynomal order
 #' * `w` (integer): window size in number of spectral points; must be uneven
 #' `m` is the , `p` is the polynomial order
 #' that should be bigger than the derivative order,  and `w` is the window size
