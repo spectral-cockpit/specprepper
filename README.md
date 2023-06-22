@@ -11,7 +11,7 @@ different methods in sequence.
 ## Scope of application
 
 This meta package provides both data-dependent and data independent 
-preprocessing methods. For example, multiplicative scatter 
+preprocessing methods that are useful for infrared spectral data. For example, multiplicative scatter 
 correction (MSC) needs special teatment in training, evaluation and prediction
 workflows. This is mainly because of overfitting and the need of data 
 independence to avoid such effects. To mediate overfitting, such methods require
