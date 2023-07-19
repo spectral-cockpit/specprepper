@@ -17,5 +17,6 @@ RoxygenNote: 7.2.3
 Imports: 
     prospectr,
     future.apply,
-    data.table
+    data.table,
+    reticulate
 Config/rextendr/version: 0.3.1
