@@ -1,7 +1,7 @@
 
 # Overview
 
-Preprocessing methods in spectroscopy modeling are mostly empirical.
+For spectroscopy modeling, spectra are typically preprocessed first. This is mostly to reduce light scattering and other optical artefacts.
 
 The goal of {specprepper} is to wrap different signal processing methods and
 make them more accessible. 
