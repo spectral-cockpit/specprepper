@@ -19,7 +19,7 @@ application to data within the resampling units.
 
 ## Goals
 
-To schedule prepreprocessing operations, we use simple and efficient data 
+To schedule prepreprocessing operations, we aim for simple and efficient data 
 structures. We make use of the "data.table" class to provide a recipe-like
 interface to configure methods and its parameters to be applied to data.
 
