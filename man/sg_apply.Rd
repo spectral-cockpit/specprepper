@@ -23,7 +23,7 @@ contain the following columns:
 \item \code{prep_set} (character)
 \item \code{prep_label} (character)
 \item \code{m} (integer): order of the derivative; \code{m = 0} signifies no derivative
-\item \code{p} (integer):
+\item \code{p} (integer): polynomal order
 \item \code{w} (integer): window size in number of spectral points; must be uneven
 \code{m} is the , \code{p} is the polynomial order
 that should be bigger than the derivative order,  and \code{w} is the window size
@@ -43,8 +43,8 @@ Savitzky-Golay smoothers with a single function application.}
 \item{append_rows}{tbd}
 }
 \value{
-\subsection{data.table with the following (list)columns:by}{
-}
+data.table with the following (list)columns:by
+#to be filled
 }
 \description{
 Apply Savitzky-Golay filtering at variable combinations of

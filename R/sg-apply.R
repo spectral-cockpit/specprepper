@@ -57,7 +57,7 @@
 #' ## Set(s) of Previously Processed Spectra
 #' tbd
 #' @return data.table with the following (list)columns:by
-#' -
+#' #to be filled
 #' @author Philipp Baumann
 #' @importFrom prospectr savitzkyGolay
 #' @export
