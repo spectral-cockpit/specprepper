@@ -51,6 +51,7 @@ preprocessing.
 - Bruker Inc custom vector normalization
 - 1-D Gaussian pyramid (armadillo binding) aka weighted moving average filter
 - Ordination methods
+- Sensor splice correction
 
 # Getting started
 
