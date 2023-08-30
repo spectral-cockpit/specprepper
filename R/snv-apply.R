@@ -44,7 +44,7 @@ snv_apply <- function(X,
     # as list-column
     dt_out[, spc_prep := spc_prep_list]
   } else {
-
+    # extend (list append) data frame columns
   }
 }
 
