@@ -2,7 +2,7 @@
 
 For spectroscopy modeling, spectra are typically preprocessed first. This is mostly to reduce light scattering and other optical artefacts.
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/gbraad)
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
 
 The goal of {specprepper} is to wrap different signal processing methods and
 make them more accessible. 
