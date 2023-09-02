@@ -1,12 +1,15 @@
-
 # Overview
 
-For spectroscopy modeling, spectra are typically preprocessed first. This is mostly to reduce light scattering and other optical artefacts.
+To extract chemical and physical knowledge from spectra in automated fashion (aka machine learning), spectra are typically preprocessed as part of the workflow. This is mostly to reduce light scattering and other optical artefacts.
 
-The goal of {specprepper} is to wrap different signal processing methods and
-make them more accessible. 
+The goal of {specprepper} is not only to wrap different signal processing methods and
+make them more accessible, but also to offer some of the exisiting algorithms with faster code implementations. 
 It features a recipe-like interface, which also makes it possible to chain 
 different methods in sequence.
+
+This is open source, so if you want to help me improving it: 
+
+[!["You Can Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
 
 ## Scope of application
 
