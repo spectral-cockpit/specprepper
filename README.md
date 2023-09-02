@@ -7,9 +7,9 @@ make them more accessible, but also to offer some of the exisiting algorithms wi
 It features a recipe-like interface, which also makes it possible to chain 
 different methods in sequence.
 
-This is open source, so if you want to help me improving it.
+This is open source, so if you want to help me improving it: 
 
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
+[!["You Can Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
 
 ## Scope of application
 
