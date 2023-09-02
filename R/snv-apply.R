@@ -3,7 +3,7 @@
 #' @inheritParams sg_apply
 #' @export
 snv_apply <- function(X,
-                      dt_prep_sets,
+                      dt_prep_sets = NULL,
                       append_rows = FALSE) {
   if (!missing(X)) {
     stopifnot(
@@ -34,6 +34,8 @@ snv_apply <- function(X,
     future.seed = 1L
   )
 
+  browser()
+
   if (is.null(dt_prep_sets)) {
     # Prepare output;
     # fresh preprocessing labels; no parameter necessary
@@ -58,6 +60,7 @@ snv_impl <- function(X) {
   }
   X <- sweep(X, 1L, matrixStats::rowMeans2(X, na.rm = TRUE), `-`)
   X <- sweep(X, 1L, matrixStats::rowSds(X, na.rm = TRUE), `/`)
+  X <- as.data.table(X)
   return(X)
 }
 
