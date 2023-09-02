@@ -9,7 +9,7 @@ different methods in sequence.
 
 This is open source, so if you want to help me improving it: 
 
-[!["You Can Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
+[!["You Can Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/specphil)
 
 ## Scope of application
 
