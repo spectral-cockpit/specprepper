@@ -3,7 +3,7 @@
 For spectroscopy modeling, spectra are typically preprocessed, which is empirical and typically part of a machine learning workflow. This is mostly to reduce light scattering and other optical artefacts.
 
 The goal of {specprepper} is not only to wrap different signal processing methods and
-make them more accessible, but also to offer some of exisiting algorithms with faster code implementations. 
+make them more accessible, but also to offer some of the exisiting algorithms with faster code implementations. 
 It features a recipe-like interface, which also makes it possible to chain 
 different methods in sequence.
 
