@@ -4,8 +4,8 @@ For spectroscopy modeling, spectra are typically preprocessed first. This is mos
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
 
-The goal of {specprepper} is to wrap different signal processing methods and
-make them more accessible. 
+The goal of {specprepper} is not only to wrap different signal processing methods and
+make them more accessible, but also to write some of exisiting algorithms with faster methods. 
 It features a recipe-like interface, which also makes it possible to chain 
 different methods in sequence.
 
