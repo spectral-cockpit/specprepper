@@ -7,8 +7,9 @@ Authors@R:
            role = c("aut", "cre"),
            email = "baumann-philipp@protonmail.com",
            comment = c(ORCID = "0000-0002-3194-8975"))
-Description: Parametrize common spectroscopic signal processing (preprocessing)
-  methods using a recipe-style syntax. Chain operations in sequence.
+Description: Schedule and perform common spectroscopic signal processing 
+  (preprocessing) methods using a recipe-style syntax. Combine different
+  operations in sequence.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
