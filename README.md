@@ -1,6 +1,6 @@
 # Overview
 
-For spectroscopy modeling, spectra are typically preprocessed first. This is mostly to reduce light scattering and other optical artefacts.
+For spectroscopy modeling, spectra are typically preprocessed, which is empirical and is part of machine learning. This is mostly to reduce light scattering and other optical artefacts.
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
 
