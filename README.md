@@ -1,3 +1,10 @@
+<!-- badges: start -->
+[![tic](https://github.com/spectral-cockpit/specprepper/workflows/tic/badge.svg?branch=main)](https://github.com/spectral-cockpit/specprepper/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![runiverse-package specprepper](https://spectral-cockpit.r-universe.dev/badges/specprepper?scale=1&color=pink&style=round)](https://spectral-cockpit.r-universe.dev/specprepper)
+[![Docs](https://img.shields.io/badge/docs-release-blue.svg)](https://spectral-cockpit.github.io/specprepper)
+<!-- badges: end -->
+
 # Overview
 
 To extract chemical and physical knowledge from spectra in automated fashion (aka machine learning), spectra are typically preprocessed as part of the workflow. This is mostly to reduce light scattering and other optical artefacts.
