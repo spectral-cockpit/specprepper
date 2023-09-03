@@ -7,7 +7,7 @@
 
 # Overview
 
-To extract chemical and physical knowledge from spectra in automated fashion (aka machine learning), spectra are typically preprocessed as part of the workflow. This is mostly to reduce light scattering and other optical artefacts.
+Chemometrics and machine learning are mathematical tools to extract and apply chemical and physical knowledge from spectra in automated fashion. For this, spectra are typically preprocessed as part of the workflow. This is mostly to reduce light scattering and other optical artefacts.
 
 The goal of {specprepper} is not only to wrap different signal processing methods and
 make them more accessible, but also to offer some of the exisiting algorithms with faster code implementations. 
