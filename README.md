@@ -1,6 +1,13 @@
+<!-- badges: start -->
+[![tic](https://github.com/spectral-cockpit/specprepper/workflows/tic/badge.svg?branch=main)](https://github.com/spectral-cockpit/specprepper/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![runiverse-package specprepper](https://spectral-cockpit.r-universe.dev/badges/specprepper?scale=1&color=pink&style=round)](https://spectral-cockpit.r-universe.dev/specprepper)
+[![Docs](https://img.shields.io/badge/docs-release-blue.svg)](https://spectral-cockpit.github.io/specprepper)
+<!-- badges: end -->
+
 # Overview
 
-To extract chemical and physical knowledge from spectra in automated fashion (aka machine learning), spectra are typically preprocessed as part of the workflow. This is mostly to reduce light scattering and other optical artefacts.
+Chemometrics and machine learning offer a large set of mathematical tooling to extract and apply chemical and physical knowledge from spectra in automated fashion. For this, spectra are typically preprocessed as part of the workflow. This is mostly to reduce light scattering and other optical artefacts.
 
 The goal of {specprepper} is not only to wrap different signal processing methods and
 make them more accessible, but also to offer some of the exisiting algorithms with faster code implementations. 
@@ -9,7 +16,7 @@ different methods in sequence.
 
 This is open source, so if you want to help me improving it: 
 
-[!["You Can Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/spectrophil)
+[!["You Can Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/specphil)
 
 ## Scope of application
 

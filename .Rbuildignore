@@ -1,1 +1,4 @@
 ^LICENSE\.md$
+^\.ccache$
+^\.github$
+^tic\.R$
