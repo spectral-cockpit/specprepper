@@ -6,7 +6,7 @@
 \alias{specprepper-package}
 \title{specprepper: Plan and Apply Chained Preprocessing Operations on Spectra}
 \description{
-Parametrize common spectroscopic signal processing (preprocessing) methods using a recipe-style syntax. Chain operations in sequence.
+Schedule and perform common spectroscopic signal processing (preprocessing) methods using a recipe-style syntax. Combine different operations in sequence.
 }
 \author{
 \strong{Maintainer}: Philipp Baumann \email{baumann-philipp@protonmail.com} (\href{https://orcid.org/0000-0002-3194-8975}{ORCID})
