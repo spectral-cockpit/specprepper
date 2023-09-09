@@ -19,5 +19,6 @@ Imports:
     prospectr,
     future.apply,
     data.table,
-    RcppArmadillo
+    RcppArmadillo,
+    matrixStats
 Config/rextendr/version: 0.3.1

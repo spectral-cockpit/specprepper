@@ -2,3 +2,4 @@
 ^\.ccache$
 ^\.github$
 ^tic\.R$
+inst/extdata/swiss-spec-lib-spectra_version1

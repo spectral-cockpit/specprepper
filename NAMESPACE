@@ -2,7 +2,10 @@
 
 export(sg_apply)
 export(sg_make_plan)
+export(snv_apply)
 import(data.table)
 importFrom(future.apply,future_Map)
 importFrom(future.apply,future_lapply)
+importFrom(matrixStats,rowMeans2)
+importFrom(matrixStats,rowSds)
 importFrom(prospectr,savitzkyGolay)

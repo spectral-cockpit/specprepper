@@ -1,3 +1,4 @@
+#' Compute the standard normal variate for collections of spectra
 #' @param X `matrix`, `data.frame` or `data.table` with spectra used as input
 #' to compute standard normal variate (SNV)
 #' @inheritParams sg_apply
@@ -11,6 +12,8 @@ snv_apply <- function(X,
         is.matrix(X) || is.data.frame(X)
     )
   }
+
+  prep_label <- prep_params <- prep_set <- spc_prep <- NULL
 
   if (!is.null(dt_prep_sets)) {
     checkset_dt_prep_sets(dt_prep_sets)
@@ -34,22 +37,48 @@ snv_apply <- function(X,
     future.seed = 1L
   )
 
-  browser()
-
   if (is.null(dt_prep_sets)) {
     # Prepare output;
     # fresh preprocessing labels; no parameter necessary
-    dt_out <- data.table(
+    dt_prep <- data.table(
       prep_set = "snv", prep_label = "snv", prep_params = NULL
     )
     # add list of spectra processed with Standard Normal Variate (SNV)
     # as list-column
-    dt_out[, spc_prep := spc_prep_list]
+    dt_prep[, spc_prep := spc_prep_list]
   } else {
+    dt_prep <- copy(dt_prep_sets[, .(prep_set, prep_label, prep_params)])
     # extend (list append) data frame columns
+    dt_prep[, `:=`(
+      prep_set = paste0(prep_set, "-snv"),
+      prep_label = paste0(prep_label, "-snv"),
+      prep_params = lapply(prep_params, function(x) {
+        cbind(x, data.table(snv = NA))
+      })
+    )]
+
+    # append the newly processed spectra
+    dt_prep[, spc_prep := spc_prep_list]
+
+    if (isTRUE(append_rows)) {
+      # row bind newly processed spectra with supplied spectra
+      dt_out <- rbindlist(
+        list(
+          dt_prep_sets, # input as supplied
+          dt_prep
+        ) # preprocessed based on input
+      )
+    } else {
+      # return only newly processed spectra
+      dt_out <- dt_prep
+    }
+
+    return(dt_out)
   }
 }
 
+#' @noRd
+#' @importFrom matrixStats rowMeans2 rowSds
 snv_impl <- function(X) {
   if (!is.matrix(X)) {
     stopifnot(
