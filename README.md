@@ -45,7 +45,7 @@ The roadmap of this package might is subject to change, because it is still
 maturing.
 
 
-This R meta library that is also spiced up with python and rust modules in the
+This R meta library that is also spiced up with rust code in the
 back is mainly intended for creating containerized environments for
 preprocessing.
 
