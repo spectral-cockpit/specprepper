@@ -22,3 +22,5 @@ Imports:
     RcppArmadillo,
     matrixStats
 Config/rextendr/version: 0.3.1
+Suggests: 
+    Rarr
