@@ -46,8 +46,7 @@ maturing.
 
 
 This R meta library that is also spiced up with rust code in the
-back is mainly intended for creating containerized environments for
-preprocessing.
+back is made with a focus on containerized environments for preprocessing.
 
 ## Currently supported methods
 
