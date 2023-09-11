@@ -12,7 +12,7 @@ Chemometrics and machine learning offer a large set of mathematical tooling to e
 The goal of {specprepper} is not only to wrap different signal processing methods and
 make them more accessible, but also to offer some of the exisiting algorithms with faster code implementations. 
 It features a recipe-like interface, which also makes it possible to chain 
-different methods in sequence.
+different methods in sequence. I will soon add support to save preprocessed spectra as chunked multimensional arrays on disk using the zarr format.
 
 This is open source, so if you want to help me improving it: 
 
