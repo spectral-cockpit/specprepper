@@ -38,9 +38,11 @@ function. Contains labelled sets of preprocessed spectra:
 This argument allows to chain preprocessing in sequential manner, and i.e. apply variable
 Savitzky-Golay smoothers with a single function application.}
 
-\item{nest_params}{tbd}
+\item{nest_params}{logical whether to nest the Savitzky-Golay parameters in
+a \code{prep_params} list-column.}
 
-\item{append_rows}{tbd}
+\item{append_rows}{logical whether to append the newly processed rows, when
+\code{dt_prep_sets} is not NULL.}
 }
 \value{
 data.table with the following (list)columns:by

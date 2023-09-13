@@ -21,8 +21,10 @@
 #' function. Contains labelled sets of preprocessed spectra:
 #' This argument allows to chain preprocessing in sequential manner, and i.e. apply variable
 #' Savitzky-Golay smoothers with a single function application.
-#' @param nest_params tbd
-#' @param append_rows tbd
+#' @param nest_params logical whether to nest the Savitzky-Golay parameters in
+#' a `prep_params` list-column.
+#' @param append_rows logical whether to append the newly processed rows, when
+#' `dt_prep_sets` is not NULL.
 #' @details
 #' ## Design principles
 #' Savitzky-Golay transformation (moving window polynomial least-squares) prior modeling can help

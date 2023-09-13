@@ -15,7 +15,8 @@ function. Contains labelled sets of preprocessed spectra:
 This argument allows to chain preprocessing in sequential manner, and i.e. apply variable
 Savitzky-Golay smoothers with a single function application.}
 
-\item{append_rows}{tbd}
+\item{append_rows}{logical whether to append the newly processed rows, when
+\code{dt_prep_sets} is not NULL.}
 }
 \description{
 Compute the standard normal variate for collections of spectra
