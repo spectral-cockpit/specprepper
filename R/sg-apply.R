@@ -94,7 +94,6 @@ sg_apply <- function(X,
   dt_sg_plan <- copy(dt_sg_plan) # use explicit copy
 
   if (is.null(dt_prep_sets)) {
-
     # use X as single set of spectra
     m_vec <- dt_sg_plan$m
     p_vec <- dt_sg_plan$p
@@ -103,7 +102,6 @@ sg_apply <- function(X,
     # for mapping
     spc_list <- list(X)
   } else {
-
     # make data.table with full-factorial combination of sets of already
     # processed spectra (list-column) and planned parameter sets for which
     # Savitzky-Golay function will be invoked
@@ -116,6 +114,7 @@ sg_apply <- function(X,
     # Get list of data.frames/matrices/data.tables with spectra to be processed
     # from list-column
     spc_list <- dt_prep$spc_prep
+    dt_prep[, spc_prep := NULL]
   }
 
   # syntax identical to `base::Map()`; multivariate apply to map over the
@@ -137,7 +136,6 @@ sg_apply <- function(X,
   )
 
   if (is.null(dt_prep_sets)) {
-
     # Prepare output
     dt_out <- copy(dt_sg_plan)
 
@@ -151,16 +149,30 @@ sg_apply <- function(X,
     # add list of spectra processed with Savitzky-Golay as list-column
     dt_out[, spc_prep := spc_prep_list]
   } else {
-
+    if ("prep_params" %in% colnames(dt_prep)) {
+      dt_prep[, prep_params_in := prep_params]
+    }
     # replace the old parameter set column (`prep_params`) with
     # nested Savitzky-Golay parameters in list-column (rowwise)
-    dt_prep[, c("prep_params", "spc_prep") := NULL][
+    dt_prep[
       , prep_params := Map(function(m, p, w) {
         data.table(m = m, p = p, w = w)
       }, m, p, w)
     ][
       , c("m", "p", "w") := NULL
     ]
+    dt_prep[, `:=`(
+      prep_set = paste0(prep_set, "-snv"),
+      prep_label = paste0(prep_label, "-snv")
+    )]
+
+    if ("prep_params_in" %in% colnames(dt_prep)) {
+      dt_prep[, prep_params := Map(
+        function(x, y) cbind(x, y),
+        prep_params_in, prep_params
+      )]
+    }
+
     # append newly preprocessed data
     dt_prep[, spc_prep := spc_prep_list]
 
@@ -228,8 +240,8 @@ sg_make_dt_prep <- function(dt_sg_plan,
   # identifiers into one
   dt_prep[, rowid := NULL]
   dt_prep[, `:=`(
-    prep_set = paste0(prep_set, ".", prep_set_cb),
-    prep_label = paste0(prep_label, ".", prep_label_cb),
+    prep_set = paste0(prep_set, "-", prep_set_cb),
+    prep_label = paste0(prep_label, "-", prep_label_cb),
     prep_label_cb = NULL,
     prep_set_cb = NULL
   )]
