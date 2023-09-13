@@ -10,7 +10,7 @@ snv_apply(X, dt_prep_sets = NULL, append_rows = FALSE)
 \item{X}{\code{matrix}, \code{data.frame} or \code{data.table} with spectra used as input
 to compute standard normal variate (SNV)}
 
-\item{dt_prep_sets}{A standardized \code{data.table}, i.e. returned from \verb{specprep::*_apply()}
+\item{dt_prep_sets}{A standardized \code{data.table}, i.e. returned from \verb{specprepper::*_apply()}
 function. Contains labelled sets of preprocessed spectra:
 This argument allows to chain preprocessing in sequential manner, and i.e. apply variable
 Savitzky-Golay smoothers with a single function application.}

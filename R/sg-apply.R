@@ -17,7 +17,7 @@
 #'  *Savitzky-Golay Plan* for templating the required object and
 #' [prospectr::savitzkyGolay()] for further the original Savitzky-Golay
 #' algorithm.
-#' @param dt_prep_sets A standardized `data.table`, i.e. returned from `specprep::*_apply()`
+#' @param dt_prep_sets A standardized `data.table`, i.e. returned from `specprepper::*_apply()`
 #' function. Contains labelled sets of preprocessed spectra:
 #' This argument allows to chain preprocessing in sequential manner, and i.e. apply variable
 #' Savitzky-Golay smoothers with a single function application.
