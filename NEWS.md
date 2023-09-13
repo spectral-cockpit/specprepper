@@ -1,5 +1,11 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# specprepper 0.2.0 (2023-09-13)
+
+- patch `sg_apply()`, so that it can be run after e.g. `snv_apply()` (via
+  `dt_prep_sets` input argument).
+
+
 # specprepper 0.1.0 (2023-09-09)
 
 ## Features
