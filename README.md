@@ -50,13 +50,13 @@ back is made with a focus on containerized environments for preprocessing.
 
 ## Currently supported methods
 
-- Savitzky-Golay smoothing
+- Savitzky-Golay smoothing: `sg_apply()`
+- Standard Normal Variate: `snv_apply()`
 
 ## Planned methods
 
 - Different wavelet transforms
 - Binning/bucketing
-- Standard Normal Variate
 - Bruker Inc custom vector normalization
 - 1-D Gaussian pyramid (armadillo binding) aka weighted moving average filter
 - Ordination methods
