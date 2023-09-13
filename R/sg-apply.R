@@ -163,10 +163,6 @@ sg_apply <- function(X,
     ][
       , c("m", "p", "w") := NULL
     ]
-    dt_prep[, `:=`(
-      prep_set = paste0(prep_set, "-snv"),
-      prep_label = paste0(prep_label, "-snv")
-    )]
 
     if ("prep_params_in" %in% colnames(dt_prep)) {
       dt_prep[, prep_params := Map(
