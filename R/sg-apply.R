@@ -75,7 +75,8 @@ sg_apply <- function(X,
     )
   }
 
-  prep_params <- prep_set <- . <- prep_label <- spc_prep <- m <- p <- w <- NULL
+  prep_params <- prep_params_in <- prep_set <- prep_label <- spc_prep <- m <-
+    p <- w <- NULL
 
   # Set processing plan object to data.table if it is not yet one
   if (!is.data.table(dt_sg_plan)) setDT(dt_sg_plan)
