@@ -7,17 +7,17 @@
 #' with labels when inputting a single matrix, data frame or data.table.
 #' @param X `matrix`, `data.frame` or `data.table` for which label rows
 #' are to be applied.
-#' @param vec_row: atomic vector with row labels; need to have same length
+#' @param vec_row atomic vector with row labels; need to have same length
 #' as `nrow(X)` or rows in all `spc_proc` list-column data.table's.
-#' @param vec_id: atomic vector with id labels, needs to have same length
+#' @param vec_id atomic vector with id labels, needs to have same length
 #' as `nrow(X)` or rows in all `spc_proc` list-column data.table's. `id_vec`
 #' typically represents the smallest hiararchical unit in the measurement
 #' design, e.g., a replicate spectrum measured.
-#' @param vec_group: atomic vector with group labels; needs to have same length
+#' @param vec_group atomic vector with group labels; needs to have same length
 #' as `nrow(X)` or rows in all `spc_proc` list-column data.table's. `id_group`
 #' typically represents the group to aggregate by in specific methods applied
-#' later. Currently, this is `mean_apply()` that takes grouped means of spectra
-#' or collections of spectra.
+#' later. Currently, this is `colmean_group_apply()` that takes grouped means
+#' of spectra or collections of spectra.
 #' @return If `X` is specified:
 #' * A one-row `"data.table"` with the following columns
 #'   * `prep_set`: `"init_ids"`,
@@ -36,7 +36,7 @@
 #'   * `prep_set`: appends `"-init_ids` to the input string that states what
 #'       the main preprocessings done in previous steps.
 #'   * `prep_label`: appends `"-init_ids` to the input string that states what
-#'       was was done with abbreviations of methods in previous steps.
+#'       was done with abbreviations of methods in previous steps.
 #'   * `prep_params`: augments each data.table element in the list-column with
 #'       a new non-specific column `init_ids = NA` (indicating a new label
 #'       column but no direct effect on the processed spectra).
@@ -45,6 +45,9 @@
 #'      `dt_prep_sets` input. Each data.table in the list contains the label
 #'      columns `row` (from `vec_row`),`id` (from `vec_id`), and `group`
 #'      (from `vec_group`).
+#'   * `spec_prep`: unmodified list-column with sets of already prepared,
+#'      processed spectra. Each element is a data.table which rows corresponds
+#'      to the row labels in `id_labels`.
 #' @inheritParams sg_apply
 #' @export
 ids_apply <- function(X,

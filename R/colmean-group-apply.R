@@ -1,8 +1,8 @@
 #' Compute the mean spectra per group label for all spectra in a collection
 #' @inheritParams sg_apply
 #' @export
-mean_apply <- function(dt_prep_sets,
-                       append_rows = FALSE) {
+colmean_group_apply <- function(dt_prep_sets,
+                                append_rows = FALSE) {
   id_labels <- prep_label <- prep_params <- prep_set <- spc_prep <- NULL
 
   checkset_dt_prep_sets(dt_prep_sets)
@@ -35,7 +35,7 @@ mean_apply <- function(dt_prep_sets,
   # available, which can be controlled in the global environment of the user
   # via `future::plan()`
   spc_mean_list <- future.apply::future_Map(
-    function(X, vec_group) mean_impl(X, vec_group),
+    function(X, vec_group) colmean_group_apply_impl(X, vec_group),
     X = spc_list, vec_group = vec_group_list,
     future.seed = 1L
   )
@@ -73,7 +73,7 @@ mean_apply <- function(dt_prep_sets,
 }
 
 #' @noRd
-mean_impl <- function(X, vec_group) {
+colmean_group_apply_impl <- function(X, vec_group) {
   stopifnot(
     "`X` needs to be a data.table" =
       is.data.table(X)
