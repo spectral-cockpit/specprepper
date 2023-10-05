@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">specprepper</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.3.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.3.1.9000</span>
       </span>
     </div>
 
@@ -41,6 +41,14 @@
       
     </div>
 
+    <div class="section level2">
+<h2 class="page-header" data-toc-text="0.3.1.9000" id="specprepper-0319000-2023-10-05">specprepper 0.3.1.9000 (2023-10-05)<a class="anchor" aria-label="anchor" href="#specprepper-0319000-2023-10-05"></a></h2>
+<div class="section level3">
+<h3 id="fixes-0-3-1-9000">Fixes<a class="anchor" aria-label="anchor" href="#fixes-0-3-1-9000"></a></h3>
+<ul><li>
+<code><a href="../reference/sg_apply.html">sg_apply()</a></code>: allow joins of Savitzky-Golay plans and preprocessing labels, and then also prepared Savitzky-Golay plans with inputted <code>dt_prep_sets</code>, when there is duplicated <code>i</code>s. This is the case when <code>dt_prep_sets</code> input has already multiple rows (multiple collections) of spectra. Now, the desired duplicate joins are explicitly allowed by setting <code>allow.cartesian = TRUE</code> for respective data.table joins inside the <code>sg_make_dt_prep()</code> helper.</li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="page-header" data-toc-text="0.3.0" id="specprepper-030-2023-10-05">specprepper 0.3.0 (2023-10-05)<a class="anchor" aria-label="anchor" href="#specprepper-030-2023-10-05"></a></h2>
 <div class="section level3">
