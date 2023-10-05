@@ -2,8 +2,7 @@
 % Please edit documentation in R/ids-apply.R
 \name{ids_apply}
 \alias{ids_apply}
-\title{Add atomic vector labels for row, id and group for all rows of spectra.
-These labels can be used downstream for aggregated processing like t}
+\title{Add atomic vector labels for row, id and group for all rows of spectra.}
 \usage{
 ids_apply(X, dt_prep_sets = NULL, vec_row, vec_id, vec_group)
 }
@@ -69,12 +68,9 @@ to the row labels in \code{id_labels}.
 }
 }
 \description{
-Add atomic vector labels for row, id and group for all rows of spectra.
-These labels can be used downstream for aggregated processing like t
-}
-\details{
 Adds labels to rows of all individual spectra in collections.
-Such labels are required for taking grouped means of spectral collections
-for example. It can also be used to initialize a single spectral collection
-with labels when inputting a single matrix, data frame or data.table.
+Such labels are required for subsequent processing functions that aggregate
+spectral collections by group, for example \code{colmean_group_apply()}.
+It can also be used to initialize a single spectral collection with labels
+when inputting a single matrix, data frame or data.table.
 }

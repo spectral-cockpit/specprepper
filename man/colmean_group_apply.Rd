@@ -15,6 +15,37 @@ Savitzky-Golay smoothers with a single function application.}
 \item{append_rows}{logical whether to append the newly processed rows, when
 \code{dt_prep_sets} is not NULL.}
 }
+\value{
+\itemize{
+\item A \code{"data.table"} with as many rows as spectral collections. It contains
+at least the following columns:
+\itemize{
+\item \code{prep_set}: appends \code{"-mean_group"} to the exisiting character vector
+elements of the input data.
+\item \code{prep_label}: appends \code{"mean_group"} to the exisiting character vector
+elements of the input data.
+\item \code{prep_params}: A list-column with 1-row data.table's. Each data.table has
+a new column \code{mean_group}, contains the string \code{"id_labels$group"}.
+\item \code{id_labels}: This list-column now only contains a sliced version of the
+\code{group} column, that correspond to the new rows of the aggregated
+column means in \code{spc_prep}.
+\item \code{spc_prep}: A list-column with data.tables that contain aggregated
+means of spectra by group for each spectral collection (row of
+\code{dt_prep_sets})
+}
+}
+}
 \description{
-Compute the mean spectra per group label for all spectra in a collection
+The function can be applied to spectral collections,
+\code{dt_prep_sets}. The list-column \code{id_labels} with lists of data.tables each
+containing a column named \code{group} must be present. See also \code{ids_apply()}.
+}
+\details{
+A spectral collection typically represents an outcome of one or more
+specific preprocessing with methods and possibly associated parameters used.
+\code{colmean_group_apply()} only accepts collections with structural conventions
+of \code{dt_prep_sets}. It requires a \code{id_labels} list-column with a \code{group}
+column specifying the lables used for aggregation in each data.table element
+(one for each collection). Label columns such as \code{row} or \code{id} that were
+present before will be removed because they are assumed to be aggregated.
 }
