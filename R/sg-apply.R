@@ -169,7 +169,7 @@ sg_apply <- function(X,
       dt_prep[, prep_params := Map(
         function(x, y) cbind(x, y),
         prep_params_in, prep_params
-      )]
+      )][, prep_params_in := NULL]
     }
 
     # append newly preprocessed data
