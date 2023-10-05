@@ -41,7 +41,8 @@ snv_apply <- function(X,
     # Prepare output;
     # fresh preprocessing labels; no parameter necessary
     dt_prep <- data.table(
-      prep_set = "snv", prep_label = "snv", prep_params = NULL
+      prep_set = "snv", prep_label = "snv",
+      prep_params = list(data.table(snv = NA))
     )
     # add list of spectra processed with Standard Normal Variate (SNV)
     # as list-column
