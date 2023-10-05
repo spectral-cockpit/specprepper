@@ -1,10 +1,10 @@
 #' Add atomic vector labels for row, id and group for all rows of spectra.
-#' These labels can be used downstream for aggregated processing like t
 #'
-#' @details Adds labels to rows of all individual spectra in collections.
-#' Such labels are required for taking grouped means of spectral collections
-#' for example. It can also be used to initialize a single spectral collection
-#' with labels when inputting a single matrix, data frame or data.table.
+#' @description Adds labels to rows of all individual spectra in collections.
+#' Such labels are required for subsequent processing functions that aggregate
+#' spectral collections by group, for example `colmean_group_apply()`.
+#' It can also be used to initialize a single spectral collection with labels
+#' when inputting a single matrix, data frame or data.table.
 #' @param X `matrix`, `data.frame` or `data.table` for which label rows
 #' are to be applied.
 #' @param vec_row atomic vector with row labels; need to have same length
