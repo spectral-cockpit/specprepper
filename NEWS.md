@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# specprepper 0.3.1 (2023-10-05)
+
+- allow duplication joins for duplicated `i`s
+
+
 # specprepper 0.3.0 (2023-10-05)
 
 ## Features
