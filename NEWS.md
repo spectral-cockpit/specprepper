@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# specprepper 0.3.0 (2023-10-05)
+
+- Implement `colmean_group_apply()` and group label constructor `ids_apply.R()`
+
+
 # specprepper 0.2.1 (2023-09-13)
 
 - patch `sg_apply()` so that the extra `"-snv"` that got accidentally added
