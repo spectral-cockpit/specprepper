@@ -1,9 +1,14 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-# specprepper 0.3.1 (2023-10-05)
+# specprepper 0.3.1.9000 (2023-10-05)
 
-- allow duplication joins for duplicated `i`s
+## Fixes
 
+- `sg_apply()`: allow joins of Savitzky-Golay plans and preprocessing labels, and then also prepared
+   Savitzky-Golay plans with inputted `dt_prep_sets`, when there is duplicated `i`s.
+   This is the case when `dt_prep_sets` input has already multiple rows (multiple collections) of spectra.
+   Now, the desired duplicate joins are explicitly allowed by setting `allow.cartesian = TRUE` for
+   respective data.table joins inside the `sg_make_dt_prep()` helper.
 
 # specprepper 0.3.0 (2023-10-05)
 
