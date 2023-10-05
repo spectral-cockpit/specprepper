@@ -214,6 +214,7 @@ sg_make_dt_prep <- function(dt_sg_plan,
     new = c("prep_set_cb", "prep_label_cb")
   )
   sg_params <- dt_sg_plan[prep_joined_cb,
+    allow.cartesian = TRUE, # explicit option to allow for duplicates in i
     on = "prep_label_cb",
     nomatch = NULL
   ] # inner join
@@ -221,6 +222,7 @@ sg_make_dt_prep <- function(dt_sg_plan,
   # (`prep_joins`) and then join the data.table with
   # Savitzky-Golay parameter sets
   prep_joined_spc <- dt_prep_sets[prep_joins,
+    allow.cartesian = TRUE,
     on = "prep_label",
     nomatch = NULL
   ]
