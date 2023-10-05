@@ -1,14 +1,22 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
-# specprepper 0.3.3 (2023-10-05)
+# specprepper 0.3.4 (2023-10-05)
 
-## Fixes 
+# Fixes
 
 - `sg_apply(dt_prep_sets)`: There was an intermediary list-column called `prep_params_in`,
   that was outputted when `dt_prep_sets` was supplied as argument. This column is now
   omitted in the output data.table with the updated preprocessing sets, so that
   the objects produced can be easily row-bound with later objects downstream, 
   or combined with the input object when `append_rows = TRUE`.
+
+
+# specprepper 0.3.3 (2023-10-05)
+
+## Fixes
+
+- failed to commit changes. Keeping entry for reproducibility. The intended
+  fix is is in version 0.3.4 (see above).
 
 
 # specprepper 0.3.2 (2023-10-05)
