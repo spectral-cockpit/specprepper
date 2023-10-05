@@ -68,9 +68,9 @@ colmean_group_apply <- function(dt_prep_sets,
   group_list <- lapply(spc_mean_list, `[[`, "group")
   group_list_dt <- lapply(group_list, function(x) data.table(group = x))
 
-  dt_prep <- copy(dt_prep_sets[, .(
-    prep_set, prep_label, prep_params, id_labels
-  )])
+  dt_prep <- dt_prep_sets[, setdiff(names(dt_prep_sets), "spc_prep"),
+    with = FALSE
+  ]
   dt_prep[, `:=`(
     prep_set = paste0(prep_set, "-mean_group"),
     prep_label = paste0(prep_label, "-mean_group"),
