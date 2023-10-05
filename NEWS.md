@@ -2,8 +2,10 @@
 
 # specprepper 0.3.0 (2023-10-05)
 
-- Implement `colmean_group_apply()` and group label constructor `ids_apply.R()`
+## Features
 
+- Implement `colmean_group_apply()` and group label constructor `ids_apply.R()`. This is to apply column means to to spectral
+  collections, each by a group label.
 
 # specprepper 0.2.1 (2023-09-13)
 
