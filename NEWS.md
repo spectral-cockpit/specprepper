@@ -1,5 +1,14 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# specprepper 0.3.2 (2023-10-05)
+
+- `snv_apply(X)`: add `prep_params` as list-column with a single-row data.table (`snv = NA`)
+  to the output when `X` is provided. This makes binding outputs to other (pre)processed collections
+  of spectra possible without further intervention; also, `append_rows = TRUE` will work
+  with other methods, when output of `snv_apply()` is used as input of other `*_apply()`
+  functions.
+
+
 # specprepper 0.3.1.9000 (2023-10-05)
 
 ## Fixes
