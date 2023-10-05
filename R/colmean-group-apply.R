@@ -1,5 +1,30 @@
 #' Compute the mean spectra per group label for all spectra in a collection
+#' @description The function can be applied to spectral collections,
+#' `dt_prep_sets`. The list-column `id_labels` with lists of data.tables each
+#' containing a column named `group` must be present. See also `ids_apply()`.
 #' @inheritParams sg_apply
+#' @return
+#' * A `"data.table"` with as many rows as spectral collections. It contains
+#'   at least the following columns:
+#'   * `prep_set`: appends `"-mean_group"` to the exisiting character vector
+#'        elements of the input data.
+#'   * `prep_label`: appends `"mean_group"` to the exisiting character vector
+#'        elements of the input data.
+#'   * `prep_params`: A list-column with 1-row data.table's. Each data.table has
+#'        a new column `mean_group`, contains the string `"id_labels$group"`.
+#'   * `id_labels`: This list-column now only contains a sliced version of the
+#'        `group` column, that correspond to the new rows of the aggregated
+#'        column means in `spc_prep`.
+#'   * `spc_prep`: A list-column with data.tables that contain aggregated
+#'        means of spectra by group for each spectral collection (row of
+#'        `dt_prep_sets`)
+#' @details A spectral collection typically represents an outcome of one or more
+#' specific preprocessing with methods and possibly associated parameters used.
+#' `colmean_group_apply()` only accepts collections with structural conventions
+#' of `dt_prep_sets`. It requires a `id_labels` list-column with a `group`
+#' column specifying the lables used for aggregation in each data.table element
+#' (one for each collection). Label columns such as `row` or `id` that were
+#' present before will be removed because they are assumed to be aggregated.
 #' @export
 colmean_group_apply <- function(dt_prep_sets,
                                 append_rows = FALSE) {
@@ -9,7 +34,7 @@ colmean_group_apply <- function(dt_prep_sets,
 
   stopifnot(
     "Object `dt_prep_sets` needs to have `id_labels` list-column that contains
-    grouping information" =
+    grouping information. Apply `ids_apply() first`" =
       "id_labels" %in% colnames(dt_prep_sets)
   )
 
