@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# specprepper 0.3.5 (2023-10-06)
+
+## Fixes
+
+- `sg_apply(dt_prep_sets)`: add extra `"row_<row-number>"` string to
+  `prep_label` column of `dt_prep_sets` input when combining with 
+  Savitzky-Golay parameter sets. This modification makes sure that
+  cartesian products of existing preprocessing sets supplied as input
+  are correctly formed with the repeated Savitzky-Golay plans.
+
+
 # specprepper 0.3.4 (2023-10-05)
 
 # Fixes

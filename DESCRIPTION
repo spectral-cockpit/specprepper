@@ -1,6 +1,6 @@
 Package: specprepper
 Title: Plan and Apply Chained Preprocessing Operations on Spectra
-Version: 0.3.4
+Version: 0.3.5
 Authors@R: 
     person(given = "Philipp",
            family = "Baumann",
