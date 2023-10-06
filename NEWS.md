@@ -4,7 +4,7 @@
 
 ## Fixes
 
-- `sg_apply(dt_prep_sets)`: add extra `"row_<row-number>"` string to
+- `sg_apply(dt_prep_sets)`: add extra `"_row<row-number>"` string to
   `prep_label` column of `dt_prep_sets` input when combining with 
   Savitzky-Golay parameter sets. This modification makes sure that
   cartesian products of existing preprocessing sets supplied as input
