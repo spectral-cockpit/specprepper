@@ -202,8 +202,9 @@ sg_apply <- function(X,
 sg_make_dt_prep <- function(dt_sg_plan,
                             dt_prep_sets) {
   . <- prep_label_cb <- prep_set <- prep_set_cb <- prep_label <- NULL
+  prep_row <- seq_len(nrow(dt_prep_sets))
   prep_joins <- CJ(
-    prep_label = dt_prep_sets$prep_label,
+    prep_label = paste0(dt_prep_sets$prep_label, "_row", prep_row),
     prep_label_cb = dt_sg_plan$prep_label
   )
   # inner-join to select repeated parameter combinations; keep matching
@@ -221,6 +222,9 @@ sg_make_dt_prep <- function(dt_sg_plan,
   # Multiply the list spectra in the right order of the cross-join
   # (`prep_joins`) and then join the data.table with
   # Savitzky-Golay parameter sets
+  dt_prep_sets$prep_label <- paste0(
+    dt_prep_sets$prep_label, "_row", prep_row
+  )
   prep_joined_spc <- dt_prep_sets[prep_joins,
     allow.cartesian = TRUE,
     on = "prep_label",
